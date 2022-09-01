@@ -1,2 +1,2 @@
-script that prints all the groups the current user is part of.
-Task 2, groups
+script that changes the owner of the file 
+Task 3, New owner
