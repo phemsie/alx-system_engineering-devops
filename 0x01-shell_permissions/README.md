@@ -1,2 +1,2 @@
-script that creates an empty file
-Task 4, empty
+script that adds execute permission to the owner of the file
+Task 5, Execute
