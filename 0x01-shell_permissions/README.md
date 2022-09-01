@@ -1,2 +1,2 @@
-script that changes the owner of the file 
-Task 3, New owner
+script that creates an empty file
+Task 4, empty
