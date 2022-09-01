@@ -1,2 +1,2 @@
-script that adds execute permission to the owner of the file
-Task 5, Execute
+script that adds execute permission to the owner and the group owner, and read permission to other users
+Task 6, Multiple permission
