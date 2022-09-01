@@ -1,2 +1,2 @@
-script that adds execution permission to the owner, the group owner and the other users
-Task 7, Everybody
+script that gives other users all the permissions but denies owner and group
+Task 8, James bond
