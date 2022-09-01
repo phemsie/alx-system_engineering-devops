@@ -1,2 +1,2 @@
-script that prints the effective username of the current user
-Task 1, who am i
+script that prints all the groups the current user is part of.
+Task 2, groups
