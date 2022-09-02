@@ -1,2 +1,2 @@
-script that gives other users all the permissions but denies owner and group
-Task 8, James bond
+script that sets the mode of the file
+Task 9, John Doe
