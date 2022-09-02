@@ -1,2 +1,2 @@
-Create a script that adds execute permission to all subdirectories of the current directory
-Task 11 , Directories
+Create a script that creates a directory
+Task 12, More directories
