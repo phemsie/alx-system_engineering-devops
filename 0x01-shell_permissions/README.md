@@ -1,2 +1,2 @@
-script that changes the group owner
-Task 13, Change group
+script that changes the owner and changes the group owner
+Task 14 Owner and group
