@@ -1,1 +1,1 @@
-pathway to success
+beautiful pathway
