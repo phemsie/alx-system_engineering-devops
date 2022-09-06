@@ -1,1 +1,1 @@
-odd number
+I'm an instant star
