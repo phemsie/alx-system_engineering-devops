@@ -30,8 +30,7 @@ int main(void)
 	{
 		if (fork() == 0)
 		{
-			printf("Zombie process 
-					reated, PID: %d\n", getpid());
+			printf("Zombie process reated, PID: %d\n", getpid());
 			exit(0);
 		}
 	}
