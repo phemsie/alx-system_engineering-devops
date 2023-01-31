@@ -1,3 +1,3 @@
 #!/usr/bin/env ruby
-puts ARGV[0].scan(/Best school/).join
+puts ARGV[0].scan(/Bestschool/).join
 
