@@ -1,4 +1,4 @@
-    Host: 138091web-01
+    Hostname: 138091web-01
     address: 54.176.71.226
     Username: ubuntu
     IdentityFile: ~/.ssh/school
