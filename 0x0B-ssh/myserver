@@ -1,4 +1,4 @@
-Host 138091web-01
-    Hostname 54.176.71.226
-    User ubuntu
-    IdentityFile ~/.ssh/school
+Host: 138091web-01
+    Hostname: 54.176.71.226
+    User: ubuntu
+    IdentityFile: ~/.ssh/school
