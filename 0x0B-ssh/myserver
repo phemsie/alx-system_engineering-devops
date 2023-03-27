@@ -1,5 +1,4 @@
 Host 138091web-01
-    Hostname 54.146.71.226
     User ubuntu
     Private key school
     ssh myserver
