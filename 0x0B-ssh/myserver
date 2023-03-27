@@ -1,5 +1,4 @@
-Host 138091web-01
+Host 141899web-01
+    Hostname 34.202.233.61
     User ubuntu
-    Private key school
-    ssh myserver
     IdentityFile ~/.ssh/school
