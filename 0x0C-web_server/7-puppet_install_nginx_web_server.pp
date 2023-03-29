@@ -15,7 +15,7 @@ exec { 'nginx' :
 
 exec { 'htmlcontent' :
   require => Exec['nginx'],
-  command => 'sudo echo "Holberton School for the win!" | sudo tee /var/www/html/index.nginx-debian.html',
+  command => 'sudo echo "Hello world!" | sudo tee /var/www/html/index.nginx-debian.html',
   path    => ['/usr/bin', '/bin'],
   returns => [0,1]
 }
