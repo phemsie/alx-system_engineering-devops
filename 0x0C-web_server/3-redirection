@@ -2,8 +2,8 @@
 # Configures your Nginx server so that /redirect_me is redirecting to another page.
 sudo apt-get update -y
 sudo apt-get install nginx -y
-sudo echo "Holberton School" | sudo tee /var/www/html/index.nginx-debian.html
-sudo echo "Holberton School" | sudo tee /usr/share/nginx/html/index.html
+sudo echo "Hello World" | sudo tee /var/www/html/index.nginx-debian.html
+sudo echo "Hello World" | sudo tee /usr/share/nginx/html/index.html
 redirectme="server_name _;\n\trewrite ^\/redirect_me google.com permanent;"
 sudo sed -i "s/server_name _;/$redirectme/" /etc/nginx/sites-enabled/default
 sudo /etc/init.d/nginx start
