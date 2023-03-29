@@ -5,10 +5,10 @@ sudo apt-get install nginx -y
 sudo chown -R ubuntu:ubuntu /var/www/
 sudo chown -R ubuntu:ubuntu /etc/nginx/
 if [ -f /var/www/html/index.nginx-debian.html ]; then
-	sudo echo "Hello world!" | sudo tee /var/www/html/index.nginx-debian.html
+	sudo echo "Hello World!" | sudo tee /var/www/html/index.nginx-debian.html
 fi;
 if [ -f /usr/share/nginx/html/index.html ]; then
-	sudo echo "Hello world!" | sudo tee /usr/share/nginx/html/index.html
+	sudo echo "Hello World!" | sudo tee /usr/share/nginx/html/index.html
 fi;
 if [ -f /etc/nginx/sites-enabled/default ]; then
 	sed -i -E 's/listen [0-9]+ default_server/listen 80 default_server/g' /etc/nginx/sites-enabled/default
