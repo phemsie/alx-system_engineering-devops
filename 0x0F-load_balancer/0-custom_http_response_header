@@ -1,16 +1,43 @@
 #!/usr/bin/env bash
-# Configure Nginx so that its HTTP response contains a custom header (on web-01 and web-02
-sudo apt-get update -y
-sudo apt-get install nginx -y
-sudo ufw allow 'Nginx HTTP'
-if [ -f /var/www/html/index.nginx-debian.html ]; then
-	sudo echo "Hello World!" | sudo tee /var/www/html/index.nginx-debian.html
-fi
-if [ -f /usr/share/nginx/html/index.html ]; then
-	sudo echo "Helo World!" | sudo tee /usr/share/nginx/html/index.html
-fi
-sed -i '/listen 80 default_server/a add_header X-Served-By $hostname;' /etc/nginx/sites-enabled/default
-sed -i '/listen 80 default_server/a rewrite ^/redirect_me https://www.youtube.com/watch?v=w6E7aQnA4Ws permanent;' /etc/nginx/sites-enabled/default
-sudo echo 'Ceci n'est pas une page' >> /usr/share/nginx/html/page404.html
-sed -i '/listen 80 default_server/a error_page 404 page404.html; location = /page404.html {root  /usr/share/nginx/html; internal;}' /etc/nginx/sites-enabled/default
-sudo /etc/init.d/nginx start
+# Install and configure nginx server with the following requirement
+#+    Listens on port 80.
+#+    Returns a page containing "Holberton School" when queried
+#+     at the root with a curl GET request.
+# Configures /redirect_me as a "301 Moved Permanently".
+# Includes a custom 404 page containing "Ceci n'est pas une page".
+# Configure Nginx so that its HTTP response contains a custom header (on web-01 and web-02)
+# The name of the custom HTTP header must be X-Served-By
+# The value of the custom HTTP header must be the hostname of the server Nginx is running on
+
+
+apt-get -y update
+apt-get install -y nginx
+
+mkdir -p /var/www/html
+touch /var/www/html/index.html
+echo "Hello World!" > /var/www/html/index.html
+touch /var/www/html/404.html
+echo "Ceci n'est pas une page" > /var/www/html/404.html
+
+printf %s "server {
+        listen 80;
+        listen [::]:80 default_server;
+        
+        add_header X-Served-By $HOSTNAME;
+                
+        root /var/www/html/;
+        index index.html index.htm index.html-debian.html;
+                
+        location /redirect_me{
+            return 301 https://www.github.com/introvertedtechie;
+        }
+        
+        error_page 404 /404.html;
+        location /404{
+            root /var/www/html/;
+            internal;
+        }    
+    
+}" > /etc/nginx/sites-available/default
+
+service nginx restart
