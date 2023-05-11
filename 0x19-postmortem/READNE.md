@@ -1,3 +1,5 @@
+![200 (2)](https://gith![200 (2)](https://github.com/phemsie/alx-system_engineering-devops/assets/111120441/db7fca42-d243-40e3-b0ea-7c9ff8c34c5e)
+ub.com/phemsie/alx-system_engineering-devops/assets/111120441/c5a9d1d7-b588-4562-bb0d-47f64d263068)
 
 Postmortem: Unexpected Outage in Web application
 
